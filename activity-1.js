@@ -1,3 +1,4 @@
+'use strict';
 // Activity 1: Click Counter Challenge (15 min)
 // Goal: Use event listeners, DOM manipulation, and conditionals to count button clicks.
 
@@ -10,4 +11,23 @@
           // - Updates the displayed number.
           // - Shows a message when the count reaches 10.
   // 5. Confirm this function is added as an onclick to the button.
+ 
+  let count = 0;
+function clickCounter() {
+  console.log("clickCounter");      
+  let button = document.getElementById("click-count");
+  let counter= document.getElementById("counter");
+  let message = document.getElementById("message");
 
+count ++;
+counter.textContent = count;
+if (count === 10) {
+  message.textContent = "You've reached 10 clicks!";    
+
+   }
+
+   if (count === 25) {
+    message.textContent = "You've reached 25 clicks!";    
+  
+     }
+}
